@@ -27,21 +27,19 @@ const Navbar = () => {
             <HashLink className="link" smooth to="/#Menu">Menu</HashLink>
             <HashLink className="link" smooth to="/#About">About</HashLink>
         </ul>
-           
         {/* Mobile Navigation */}
-        
         <div className="app__navbar-menu">
             <HiMenuAlt4
                 onClick={() => { setToggle(true) }}
                 className="app__navbar-hamburger"
             />
             {
-             toggle &&  (
-             <div>
-                <HiX 
+            toggle &&  (
+            <div>
+                <HiX
                     onClick={() => {
                         setToggle(false)
-                    }} 
+                    }}
                     className="app__navbar-cancel"
                 />
 
@@ -51,7 +49,7 @@ const Navbar = () => {
                 <HashLink className="link" smooth to="/#Menu" onClick={() => { setToggle(false)}}>Menu</HashLink>
                 <HashLink className="link" smooth to="/#About" onClick={() => { setToggle(false)}}>About</HashLink>     
 
-             </div>)
+            </div>)
             }
         </div>
     </nav>

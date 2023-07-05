@@ -1,5 +1,5 @@
 import './TimeSelector.css';
-import React, { useState } from 'react';
+import React from 'react';
 
 const TimeCapsule = (props) => {
 
@@ -25,7 +25,7 @@ const TimeCapsule = (props) => {
                     })
                 }
                 </div>
-            </div> 
+            </div>
     );
 }
 
@@ -55,8 +55,6 @@ const TimeSelector = (props) => {
         isEvening = true;
 
     }
-
-    
     return (
         <div className="reservation__time-selector">
             {

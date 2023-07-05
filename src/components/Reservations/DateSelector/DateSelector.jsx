@@ -9,8 +9,11 @@ const ocassions = [
     {
         label: 'Anniversary',
         value: 'anniversary'
+    },
+    {
+        label: 'Proposal',
+        value: 'proposal'
     }
-    
 ]
 
 const DateSelector = (props) => {
@@ -43,7 +46,6 @@ const DateSelector = (props) => {
     */
     const hour = new Date().toTimeString().split(' ')[0].split(':');
     // console.log(parseInt(hour[0]))
-    
     const startingTime = 8; // 8 AM
     const closoingTime = 21; // 9 PM
 
@@ -61,7 +63,7 @@ const DateSelector = (props) => {
         // console.log(dateRef.current.value);
     }
 
-    // get ocassion value from select option 
+    // get ocassion value from select option
     const handleOcassionChange = (e) => {
         props.chooseOcassion(e.target.value);
         // console.log(e.target.value);
@@ -93,15 +95,15 @@ const DateSelector = (props) => {
         {/* add date selector and ocassion selector */}
         {/* get date and ocassion values and pass to parent component */}
         <div className="choose-date">
-            <input 
-                ref={dateRef} 
+            <input
+                ref={dateRef}
                 onChange={handleClickedDate}
-                type="date" 
+                type="date"
                 className='date-selector' />
                 {/* provide defalut value: theOcassion */}
                 {/* ocassion value is comming from parent and then onchange, send data to parent */}
             <select className='ocassion-selector' value={props.ocassion}  onChange={handleOcassionChange}>
-               {
+            {
                 ocassions.map((ocassion) => {
                 return (
                     <option value={ocassion.value}>
@@ -109,7 +111,7 @@ const DateSelector = (props) => {
                     </option>
                 );
                 })
-               }
+            }
             </select>
         </div>
         </div>

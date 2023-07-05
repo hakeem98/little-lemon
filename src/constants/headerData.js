@@ -1,5 +1,4 @@
 import resturantFood from '../assets/restauranfood.jpg';
-  
   const headerData = {
         title: "Little Lemon",
         location: "Chicago",

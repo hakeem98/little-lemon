@@ -1,5 +1,4 @@
 import MarioandAdrianA from '../assets/MarioandAdrianA.jpg';
-  
   const reservationData = {
         title: "Reserve",
         location: "A Table",

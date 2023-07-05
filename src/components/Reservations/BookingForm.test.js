@@ -10,9 +10,9 @@ import BookingForm from "./BookingForm";
 
 
 test ('Should Successfully Submit Form with all data Fileds Filled', () =>{
-    render(<BookingForm 
-        submitReservation={submitReservation} 
-        availableTimeSlots={availableTimeSlots} 
+    render(<BookingForm
+        submitReservation={submitReservation}
+        availableTimeSlots={availableTimeSlots}
       />);
 
     const submitButtom = screen.getByRole('button');

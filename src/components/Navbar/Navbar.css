@@ -59,7 +59,9 @@
     transition: all 0.3s ease-in-out;
 }
 .link:hover {
-    color: #F4CE14;
+    padding: 2px;
+    background-color: #F4CE14;
+    border-radius: 8px;
 }
 .app__navbar-menu {
     width: 35px;
