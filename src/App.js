@@ -21,67 +21,46 @@ function App() {
     // Send data to header to based on route
     let data = {};
     if(path === '/' || path === '/Little-Lemon') {
-
       data = headerData;
-
     } else if (path === '/Reservations') {
-
       data = reservationData;
-
     } else if (path === '/OrderOnline') {
-
       data = orderOnline;
-
     }
-
-    
   return (
       <>
-      
           <Navbar />
             <DataContext.Provider value={data}>
                 <Routes>
-                  <Route path='/Little-Lemon' element ={ 
+                  <Route path='/Little-Lemon' element ={
                     <>
-
                       <Header />
                       <Main />
-
-
                     </>
-                  } />                  
-                  <Route path='/' element ={ 
+                  } />
+                  <Route path='/' element ={
                     <>
-
                       <Header />
                       <Main />
-
-
                     </>
                   } />
                   <Route path='/Reservations' element={
                     <>
-
                       <Header />
                       <Reservations />
-
-                        
                     </>
                   } />
                   <Route path='/OrderOnline' element={
                     <>
                       <Header />
-                      <OrderOnline />  
+                      <OrderOnline />
                     </>
-                  } />                  
-
+                  } />
                   {/* Path for booking confirmation */}
                   <Route path='/ConfirmedBooking' element={<ConfirmedBooking/>}/>
-
                 </Routes>
             </DataContext.Provider>
           <Footer />
-
       </>
   );
 }
